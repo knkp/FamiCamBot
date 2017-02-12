@@ -23,8 +23,8 @@ class SlackInterface():
 
         # the second iteration contains the front room url
         imgurl = history['messages'][1]['text']
-        imgurl = imgurl.replace('Front Room: <','')
-        imgurl = imgurl.replace('>','')
+        imgurl = imgurl.split('<')[1]
+        imgurl = imgurl.split('>')[0]
         self.imgurl = imgurl
 
     
