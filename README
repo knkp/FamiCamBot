@@ -1,0 +1,30 @@
+Famicam-Facelogger!
+
+Need to stalk people at the lab but don't have all day to dedicate to the famduino channel for nefarious purpose's?
+Wouldn't it be great if there was some automated tool that allowed you to track who goes to the lab and when 
+you need to stir up some shit?
+
+WELL NOW YOU CAN!
+
+INTRODUCING
+
+THE FAMICAM FACELOGGER!!
+
+This handy little bot's goal is to grab the latest jpg file url from the familab slack, perform 
+image processing to extrapolate and recognizes the faces of anyone in the image and then log the time and individuals found
+to a database for further analysis!
+
+All your big brother needs are freely provided open source just because I was bored and needed a weekend project!
+
+Have fun kids! 
+
+
+DEPENDENCIES:
+-------------------------------------------------------
+
+slackclient:
+https://github.com/slackapi/python-slackclient
+
+simplecv:
+http://simplecv.org/
+
