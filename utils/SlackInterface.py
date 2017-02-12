@@ -1,9 +1,10 @@
 from slackclient import SlackClient
 from datetime import datetime
 import json
+import os
 
 class SlackInterface():
-    def __init__(self, config_file = 'config'):
+    def __init__(self, config_file = os.path.dirname(os.path.abspath(__file__)) + '/config'):
 
         _file = open(config_file, 'r')
         _conf = json.loads(_file.read())
