@@ -19,7 +19,7 @@ class App():
 
     def doAllTheThings(self):
         self.updateUrl()
-        #self.updateTempImg()
+        self.updateTempImg()
         self.countTheFaces()
         print self.facecount
     
