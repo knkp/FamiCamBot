@@ -39,6 +39,23 @@ class SlackInterface():
     def getTimeStamp(self):
         return self.timestamp
 
+    def lookForChannel(self, _channel_name):
+	listOfChannels = self.listChannels()
+	for channel in listOfChannels:
+		if channel["name"] == _channel_name:
+			return channel["id"]
+
+# Low level slack API
+    def listChannels(self):
+	result = self.sclient.api_call(
+		"channels.list"
+	)
+
+	return result["channels"]
+
+
+
 if __name__ == '__main__':
     example = SlackInterface()
-    print example.updateImgUrl()
+    #print example.updateImgUrl()
+    print example.lookForChannel("famduino")
